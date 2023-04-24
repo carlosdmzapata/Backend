@@ -10,19 +10,24 @@ class ProductManager {
 
     addProduct (title, description, price, thumbnail, code, stock) {
         const product = {
-            title: "producto prueba",
-            description: "Este es un producto prueba",
-            price: 200,
-            thumbnail: "Sin imagen",
-            code: "abc123",
-            stock: 25,    
+            title,
+            description,
+            price,
+            thumbnail,
+            code,
+            stock,    
         }; 
 
         product.id = this.#getID;
 
         this.products.push(product);
-
     }
+
+    getProduct(id) {
+        const product = products.find(product => product.id === id);
+        return product || null;
+      }
+      
 
     #getID(){
         const oldID = this.#id
@@ -48,5 +53,3 @@ class ProductManager {
     }
 
 }
-    
-     
