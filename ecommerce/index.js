@@ -23,7 +23,7 @@ class ProductManager {
         this.products.push(product);
     }
 
-    getProduct(id) {
+    getProductById(id) {
         const product = products.find(product => product.id === id);
         return product || null;
       }
